@@ -1,6 +1,9 @@
 # EulerRandomProject
 This is the first project that I represent in public. I will glad if someone will look and will give me feedback.
 
+<h3>if U want to skip and see the main of the project please see below the "conclusion" pharse.</h3>
+
+
 I have already started to make the project, few days ago so I post what I already write and did. 
 
 
@@ -25,7 +28,7 @@ Since I have solved more that few question so I gonna pick randomaly one that I 
 
 <h1>SO… HERE WE GO!!!</h1>
 
-<h4>THE PROJECTS: EULER ?
+<h4>THE PROJECTS: EULER ?<br>
 PROJECT TARGET: To solve one of the problems of project euler, that I yet solve, up to problem 40. by JAVA.</h4>
 
 General mission and requirements:
@@ -34,7 +37,7 @@ General mission and requirements:
 3- the solution will be with opportunity to the user to fill manually the variables. not hardcoded. 
 * At the future another ideas – so put it as web-site, mobie app, desktop application…
 
-Getting  Started
+<h1>Getting  Started</h1>
 
 So I don't want to work "Over planned" ,I have tried it once and it was too heavy. I am a natural planned man, so I want to flow…. I will do with every step some TODO. And we will see how it's will go…
 
@@ -70,11 +73,12 @@ from 1-40, exclude the above mentioned problems.
 The creating will be by java.
 
 
-<h3>the main mission for get the target is :
-ToDo
-1- Friendly Lottery-Program for choosen randomaly the problem.
-2- Make the program for answer. 
-</3>
+<h3>the main mission for get the target is :<br>
+ToDo<br>
+1- Friendly Lottery-Program for choosen randomaly the problem.<br>
+
+2- Make the program for answer. <br>
+</h3>
 If you skip to here and U want to understand more details, please see indside the article. 
 For see more the project process please see the relevant files.
 
