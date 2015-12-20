@@ -28,7 +28,7 @@ Since I have solved more that few question so I gonna pick randomaly one that I 
 
 <h1>SO… HERE WE GO!!!</h1>
 
-<h4>THE PROJECTS: EULER ?<br>
+<h4>THE PROJECTS: EULER ???(RANDOM)<br>
 PROJECT TARGET: To solve one of the problems of project euler, that I yet solve, up to problem 40. by JAVA.</h4>
 
 General mission and requirements:
@@ -64,7 +64,8 @@ This step was for let me know what problems(from euler) I want to skip and not c
 -After that now will be mission inside mission. I want to create a lottery program (the target is desktop application) that 
 will help the user to choose random values, from specific ranges by his need. 
 
-so I will continue with this mission at ... . See there please.
+so I will continue with this mission at [here]{https://github.com/yim222/EulerRandomProject-Java/blob/master/LotterProgram/readme.md} .
+See there please.
 
 <h1>Conclusion</h1>
 The main Goals of the Project is:
