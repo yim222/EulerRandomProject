@@ -1,0 +1,169 @@
+package fateProgram;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
+
+public class ReadyMethods {
+	/**
+	 * method for return and output specific amount of Randoms 
+	//The values is always differnts.//There is output at this method//
+	//0 include and bound not include
+	 * 
+	 */	
+		// !!** Good method not change!!:-)
+		public static int[] chooseNumbers(int amount, int bound){
+			Random random = new Random();
+			//case for entering bound that less from amount
+			if(bound < amount){
+				System.out.println("Impossible that the bound will be bigger than the amount \n"
+						+ "pleas enter proper values...");
+				return null;
+			}
+			
+			int[] numbers = new int[amount];
+			boolean wasZero = false;                  
+			for(int i =0; i< numbers.length;i++){
+				
+				int randomValue = 0;
+				
+				boolean dontStop = false;
+				while(!dontStop){
+					//System.out.println("check");
+					boolean alreadyTaken = false;
+					randomValue =  random.nextInt(bound);
+					//System.out.println(randomValue);
+					for(int j = 0; j<=i; j++){
+						if(numbers[j]==randomValue && randomValue != 0){
+							alreadyTaken = true;
+							break;
+						}
+						//case for 0
+						else if(randomValue == 0 && wasZero ){
+							alreadyTaken = true;
+						}
+						
+						
+					}
+					if(alreadyTaken == false){
+						dontStop = true;
+					}
+					
+				
+				}
+				numbers[i] =randomValue;
+				if(randomValue == 0){
+					wasZero = true;
+				}
+				//case for identify number is needed here!!!- 7/6/16 - what I ment ? 
+				System.out.print(numbers[i] +" ");
+			}
+			return numbers;
+		}
+		
+		
+		/** method that's retrun "n" (specific amount) randoms from list
+		 * no repitition
+		//use with that : choosedNumbers(int amount, int bound)
+		 * TO FIX:
+		 * 1 -chooseNumbers output values. it's not nessecay. 
+		 * 
+		 * */
+		public static ArrayList chooseNRandoms(ArrayList<Integer> list, int n){
+			if (n > list.size()){
+				System.out.println("There is "+list.size()+" elements at the list\n"
+						+ "you trying to choose "+n+" values from it...\n"
+						+ "You can't choose more values than list's elements.\n"
+						+ "Please enter proper values..");
+				return null;
+			}
+			
+			//ArrayList for contain the new randoms that generated
+			ArrayList<Integer> newRandoms = new ArrayList<Integer>();
+			
+			//array for contain all the randoms values
+			int listIndexes[] = chooseNumbers(n, list.size());
+			for(int i = 0; i< n;i++){
+				newRandoms.add(list.get(listIndexes[i]));
+				
+			}
+			
+			
+			
+			return newRandoms;
+		}
+		
+		
+		
+		/**Good Mehtod :-) 
+		//
+		//return all the number that at the range.
+		// incldue start and end
+		 * End must be > start - if not - it's return null.
+		  
+		
+		 * 
+		 * @param startRange
+		 * @param endRange
+		 * @return
+		 */
+		 
+		public static ArrayList<Integer> rangeNumbersToList(int startRange, int endRange ){
+			//case for end not bigger than start 
+			if(!(startRange < endRange) ){
+				System.out.println("The end range must to be larger than start range,\n"
+						+ "please enter proper values");
+				return null;
+			}
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			for(int i = startRange; i <= endRange; i++){
+				list.add(i);
+			}
+			
+			
+			
+			
+			
+			return list;
+		}
+		
+		
+		public static void main(String[] args) {
+			
+			
+			Integer[] list = {22,55,325,34,235,12,346};
+			ArrayList<Integer> list2 = new ArrayList<Integer>(Arrays.asList(list));
+			
+			//Test for - int[] chooseNumbers(int amount, int bound)
+			//that choose specific amount of randoms to the bound
+			chooseNumbers(6,42);
+			System.out.println();
+			
+			//Test for - chooseNRandoms(ArrayList<Integer> list, int n)
+			//that choose "n" numbers from specific list
+			System.out.println(chooseNRandoms(list2, 2));
+			
+			//Test for - ArrayList<Integer> rangeNumbersToList(int startRange, int endRange )
+			//that generate a list from the range
+			System.out.println(rangeNumbersToList(55 ,78));
+			
+		}
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
