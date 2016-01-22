@@ -1,5 +1,10 @@
-Document originally created : 16/12/15 ,5 on Tevet 5775 (jewish count)
+Document originally created : 16/12/2015 ,5 on Tevet 5775 (jewish count)
 
+Update - 22/1/2016
+See the "ReadyMethods" file for some ready method. I am changing the program name to "Fate Program".
+
+
+First doucumentatio - 16/12/2015
 <h1>Documentation of the work on the Lottery Program</h1>
 fron new to old.
 The excution of all that documented here is at the source file : LotteryNumberDraft.java - see there. 
