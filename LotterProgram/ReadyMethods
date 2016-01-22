@@ -129,6 +129,27 @@ public class ReadyMethods {
 		}
 		
 		
+		/**
+		 * Good Method :) and very simple
+		Method for generate list from some numbers 
+		 * @param someNumbers
+		 * @return
+		 * 
+		 * TO FIX: 
+		 * 1- maybe if there is duplicate values to drop them. Consideration is needed.
+		 */
+		public static ArrayList<Integer> someNumbersToList(int... someNumbers ){
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			for (int i : someNumbers){
+				list.add(i);
+				
+			}
+			
+			
+			return list;
+		}
+		
+		
 		public static void main(String[] args) {
 			
 			
@@ -147,6 +168,10 @@ public class ReadyMethods {
 			//Test for - ArrayList<Integer> rangeNumbersToList(int startRange, int endRange )
 			//that generate a list from the range
 			System.out.println(rangeNumbersToList(55 ,78));
+			
+			//Test for - ArrayList<Integer> someNumbersToList(int... someNumbers )
+			//that generate some numbers to list 
+			System.out.println(someNumbersToList(66,88,69,13,743,76));
 			
 		}
 		
