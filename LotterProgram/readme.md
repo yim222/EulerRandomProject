@@ -22,7 +22,7 @@ your next mission is :
 1) Sharp it , with proper accsessing and modifiers, good naming, good implementation (The more u can do it flexible with utility to get the data from outside – better). 
 2)Then -  take to formal class, and do to it  a proper test . For using at the future. 
 after u done all – u can continue…
-
+ 
 
 goodbye.
 
