@@ -36,7 +36,7 @@ little TODO
 Main task : - define method :
 1.1+arratList listNumbers(int  startRange, int endRange).
 return all the number that at the range.
-1.2+overLoaded listNumbers(int… singleNumbers)
+1.2+overLoaded listNumbers(int… singleNumbers) 
 return all the single numbers that inside.
 
 1 –How to define random choosing manually.  – not for now!!
