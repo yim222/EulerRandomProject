@@ -1,5 +1,10 @@
 Document originally created : 16/12/2015 ,5 on Tevet 5775 (jewish count)
 
+
+<h3>Update - 7/2/2016</h3>
+Great. I uploaded a primary method of primary execution of the program ( by hardcode). See at "ReadyMethods". About the next - Please see the "ReadMe" at the main folder of this project.
+
+
 <h3>Update - 22/1/2016</h3></br>
 See the "ReadyMethods" file for some ready method. I am changing the program name to "Fate Program".
 
