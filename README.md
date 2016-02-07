@@ -1,6 +1,10 @@
 # EulerRandomProject
 This is the first project that I represent in public. I will glad if someone will look and will give me feedback.
 
+<h2>*For the updating process please see "updating" file. For more resource please se this link at Dropbox:</h2>
+https://www.dropbox.com/sh/fv3i6ejor0z38fq/AAC6HFzNgqZA4KhVyhEUy4NOa?dl=0
+
+
 <h3>if U want to skip and see the main of the project please see below the "conclusion" pharse.</h3>
 
 
