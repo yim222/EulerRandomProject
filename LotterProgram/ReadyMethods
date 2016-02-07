@@ -25,7 +25,7 @@ public class ReadyMethods {
 			int[] numbers = new int[amount];
 			boolean wasZero = false;                  
 			for(int i =0; i< numbers.length;i++){
-				 
+				
 				int randomValue = 0;
 				
 				boolean dontStop = false;
@@ -67,7 +67,7 @@ public class ReadyMethods {
 		 * no repitition
 		//use with that : choosedNumbers(int amount, int bound)
 		 * TO FIX:
-		 * 1 -chooseNumbers output values. it's not nessecay. 
+		 * 1 -chooseNumbers output values. it's not nessecay. So remove it/ 
 		 * 
 		 * */
 		public static ArrayList chooseNRandoms(ArrayList<Integer> list, int n){
@@ -149,12 +149,109 @@ public class ReadyMethods {
 			return list;
 		}
 		
+		/**
+		 * Good method :)
+		 * 
+		 * @param list
+		 * @param from
+		 * @param to
+		 * @return
+		 */
+	
+		//Method that exclude from list all numbers at the range, include them 
+		public static ArrayList<Integer> excludeNumbers(ArrayList<Integer> list,
+				int from, int to){
+			//case for wrong values
+			if(!(from < to)){
+				System.out.println("The end values must be larger than the start. please enter proper values");
+				return null;
+				
+			}
+			
+			ArrayList<Integer> newList = new ArrayList<Integer>();
+			for(Integer check : list){
+				if(check < from || check > to){
+					newList.add(check);
+				}
+				
+			}
+			return newList;
+			
+			
+		}
+		
+		//Good Method - exclude single numbers :-)
+		public static ArrayList<Integer> excludeNumbers(ArrayList<Integer> list,
+			
+				Integer... singleNumbers){
+			
+			//case for problem:
+			if (singleNumbers.length >= list.size()){
+				System.out.println("singleNumbers.length >= list.size()");
+				return null;
+				
+			}
+			
+			ArrayList<Integer> singleNumbers2 = new ArrayList<>(Arrays.asList(singleNumbers));
+			Collections.sort(singleNumbers2);
+			
+			int index = 0;
+			for(Integer i : singleNumbers2){
+				
+				while(true){
+					
+					if(list.get(index)==i) {
+						list.remove(index);
+						break;
+						
+					}
+					else if(list.get(index) > i && index != 0){
+						index -= 1;
+						break;
+					}
+					else{
+						index++;
+					}
+				}
+				
+				
+				
+			}
+			
+			
+			
+			return list;
+		}
+		
+		//for add list to list just ust addAll newList.addAll(listTwo);
+		
+		/**
+		 * Good Method - first execution to the program - by hardcode. Obvious that a lot of improving is needed
+		 */
+		public static void programExecutionDraft(){
+			ArrayList<Integer> rnd = new ArrayList<Integer>();
+			
+			
+			rnd = rangeNumbersToList(25, 50);
+			System.out.println("Primary list:\n" + rnd);
+			rnd.addAll(someNumbersToList(93,14 ,101, 26, 45 ,99));
+			System.out.println("List after adding some numbers : \n" + rnd);
+			rnd = excludeNumbers(rnd, 38,43);
+			System.out.println("List after exculding specific range: \n" + rnd);
+			rnd = excludeNumbers(rnd, 27,29,31);
+			System.out.println("List after excluding some numbers:\n" + rnd);
+			rnd = chooseNRandoms(rnd, 3);
+			System.out.println(); 
+			System.out.println("This is the generated Randoms: \n" +rnd);
+			
+		}
 		
 		public static void main(String[] args) {
 			
 			
-			Integer[] list = {22,55,325,34,235,12,346};
+			Integer[] list = {22,55,150,325,34,235,12,346};
 			ArrayList<Integer> list2 = new ArrayList<Integer>(Arrays.asList(list));
+			ArrayList<Integer> list3 = new ArrayList<Integer>();
 			
 			//Test for - int[] chooseNumbers(int amount, int bound)
 			//that choose specific amount of randoms to the bound
@@ -167,11 +264,34 @@ public class ReadyMethods {
 			
 			//Test for - ArrayList<Integer> rangeNumbersToList(int startRange, int endRange )
 			//that generate a list from the range
-			System.out.println(rangeNumbersToList(55 ,78));
+			list3 = rangeNumbersToList(90, 99);
+			System.out.println(list3);
 			
 			//Test for - ArrayList<Integer> someNumbersToList(int... someNumbers )
 			//that generate some numbers to list 
+			
 			System.out.println(someNumbersToList(66,88,69,13,743,76));
+			
+			//Test for - ArrayList<Integer> excludeNumbers(ArrayList<Integer> list,
+			//int from, int to) that exclude the range (include) from the list. 
+			System.out.println("This is the first list - " + list3);
+			list3 = excludeNumbers(list3, 120, 135);
+			System.out.println("This is after the exclude - "+list3);
+			
+			//Test for - ArrayList<Integer> excludeNumbers(ArrayList<Integer> list,
+			//Integer... singleNumbers), that exclude single numbers from the list.
+			
+			System.out.println(" This is the list " + list2);
+			System.out.println("This is after the exclude " + excludeNumbers(list2, 235 , 88 ,4,22, 21));
+			list3 = excludeNumbers(list3, 93, 117);
+			System.out.println("\nThis is list 1 - " + list2 +"\nThis is list 2 - "+ list3);
+			list2.addAll(list3);
+			System.out.println("They togther - " + list2);
+			
+			System.out.println("\n"
+					+ "test for execution of the program: ");
+			programExecutionDraft();
+			
 			
 		}
 		
